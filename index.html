@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>Orla Limp</title>
+    <script src="https://kit.fontawesome.com/74b89e9116.js" crossorigin="anonymous"></script>
+    
+</head>
+
+<body>
+    <script>
+        function toggleAssistant() {
+            const popup = document.getElementById('orlando-popup');
+            popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function showInfo(infoType) {
+            const infoSection = document.getElementById('info-section');
+            let info = '';
+            
+            switch (infoType) {
+                case 'lavagem':
+                    info = '<p>Oferecemos serviços completos de lavagem, secagem e organização de roupas!</p>';
+                    break;
+                case 'planos':
+                    info = '<p>Confira nossos planos: mensal por R$160,00 e semestral por R$1.350,00.</p>';
+                    break;
+                case 'contato':
+                    info = '<p>Nosso contato: (49) 99999-9999 ou contato@orlaLimp.com</p>';
+                    break;
+                default:
+                    info = '';
+            }
+
+            infoSection.innerHTML = info;
+        }
+
+        window.onload = function() {
+            // Mostrar caixa de mensagem do assistente Orlando
+            const messageBox = document.getElementById('orlando-message');
+            messageBox.style.display = 'block';
+            
+            // Ocultar a mensagem após 5 segundos
+            setTimeout(() => {
+                messageBox.style.display = 'none';
+            }, 15000);
+            
+            // Mostrar o diálogo de desconto ao carregar a página
+            const dialog = document.getElementById('discountDialog');
+            dialog.showModal(); // Abre o diálogo
+
+            document.getElementById('closeDialog').onclick = function() {
+                dialog.close(); // Fecha o diálogo ao clicar no botão "Fechar"
+            };
+        };
+    </script>
+    <dialog id="discountDialog">
+    <div class="dialog-content">
+        <img src="imagens usadas/rfo.png" alt="Desconto de 10%" class="dialog-image">
+        <h2 style="color: #0B9FB7;">VOCÊ GANHOU 10%!</h2>
+        <p>Bem-vindo à Orla Limp! Todos clientes que <br>chegarem na loja no mês de Novembro ganham<br> 10% de desconto na primeira lavagem!</p>
+        <button id="closeDialog">FECHAR</button>
+    </div>
+</dialog>
+    <header>
+        <img style="height: 120px;" class="header-logo" src="imagens usadas/Screenshot_2024-10-09-14-49-18-728_com.android.chrome-removebg-preview.png" alt="">
+        <h1 style="padding: 20px;">ORLA LIMP</h1>
+        <nav>
+            <ul>
+                <li><a href="#image">INÍCIO</a></li>
+                <li><a href="#servicos">SERVIÇOS</a></li>
+                <li><a href="#contato">CONTATO</a></li>
+                <li><a href="loginsistema.html">SISTEMA</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section  id="image" class="image-section">
+            
+            <img src="imagens usadas/rgfte.png" alt="Descrição da Imagem" class="hero-image">
+            
+            <a href="#servicos" style="color: #ffffff;" class="button">Quero Conhecer</a>
+        </section>
+        
+        <!-- Seção de Serviços com ícones arredondados e texto à direita -->
+        <section id="servicos" class="servicos-section">
+            <h2 class="servicos-titulo">SERVIÇOS PRESTADOS</h2>
+            <div class="servico-item">
+                <div class="servico-icone">
+                    <img src="imagens usadas/lavanderia.png" alt="Lavagem de Roupas" class="servico-img-icone">
+                </div>
+                <div class="servico-texto">
+                    <h3 style="color: #0B9FB7;">LAVAGEM</h3>
+                    <p>Oferecemos um serviço completo de lavagem de roupas, utilizando produtos de alta qualidade que preservam a cor e a textura dos seus tecidos. </p>
+                </div>
+            </div>
+            
+            <div class="servico-item">
+                <div class="servico-icone">
+                    <img src="imagens usadas/pendurar-roupas.png" alt="Secagem" class="servico-img-icone">
+                </div>
+                <div class="servico-texto">
+                    <h3 style="color: #0B9FB7;">SECAGEM</h3>
+                    <p>Utilizando máquinas específicas para secagem, sem danificar a peça, essencial para aquelas que não se lavam na água e precisam de cuidados especiais.</p>
+                </div>
+            </div>
+
+            <div class="servico-item">
+                <div class="servico-icone">
+                    <img src="imagens usadas/limpando-produtos.png" alt="Organização" class="servico-img-icone">
+                </div>
+                <div class="servico-texto">
+                    <h3 style="color: #0B9FB7;">ORGANIZAÇÃO</h3>
+                    <p>Nossos profissionais utilizam técnicas especiais para eliminar rugas e vincos, deixando suas roupas com um aspecto limpo e bem cuidado.</p>
+                </div>
+            </div>
+
+            <div class="servico-item">
+                <div class="servico-icone">
+                    <img src="imagens usadas/pngegg.png" alt="Entrega" class="servico-img-icone">
+                </div>
+                <div class="servico-texto">
+                    <h3 style="color: #0B9FB7;">ENTREGA</h3>
+                    <p>Nossos entregadores levam suas roupas com todo cuidado, deixando na sua porta limpas, cheirosas e como novas!</p>
+                </div>
+            </div>
+            
+        </section>
+        <hr style="border: none; /* Remove a borda padrão */
+        height: 5px; /* Define a altura da linha */
+        background: linear-gradient(to right, #FFD700, #FDAD21); /* Degradê do amarelo para o laranja */
+        border-radius: 10px; /* Arredonda os cantos do <hr> */
+        margin: 20px 0; /* Espaçamento ao redor do <hr> */
+    ">
+    
+        <section class="sobre-nos-section"style="padding-top: 50px; ">
+            <div class="sobre-nos-imagem">
+                <img src="https://i.ytimg.com/vi/HIADrZy4lcI/maxresdefault.jpg" alt="Sobre Nós">
+            </div>
+            <div class="sobre-nos-texto" >
+                <h2>Nossas Máquinas</h2>
+                <p>Aqui na <b style="color: #0B9FB7;">Orla Limp</b> usamos as máquinas de extrema qualidade como as da LG e SAMSUNG com inumeros modos, e funções para que seus tecidos e roupas não desbotem, manchem ou deteriorem. Tecidos especificos passam por <b style="color: #0B9FB7;">diferentes etapas</b> para entregar a você um ótimo resultado! A Orla se preocupa em oferecer aos seus clientes <b style="color: #0B9FB7;">resultados excepcionais e a confiança</b> de que suas roupas estão em boas mãos.</p>
+            </div>   
+        </section>
+        
+        <section class="sobre-nos-section"style="padding-top: 90px; padding-bottom: -130px;" >
+            <div class="sobre-nos-texto">
+                <h2>Marcas parceiras</h2>
+                <p>A marca escolhida para garantir a limpeza e cuidado dos tecidos é a <b style="color: #0B9FB7;">OMO</b>, conhecida por sua eficiência e tecnologia avançada na limpeza de roupas. Além disso, a Orla também utiliza o <b style="color: #0B9FB7;">Confort</b>, marca reconhecida por sua linha de produtos de cuidado para <b style="color: #0B9FB7;">tecidos delicados</b>, garantindo assim um tratamento especial para suas roupas.
+                Esta combinação de produtos de <b style="color: #0B9FB7;">alta qualidade</b> garante uma lavagem profunda e cuidadosa, preservando a durabilidade e aparência das roupas por muito mais tempo. </p>
+            </div>
+            <div class="sobre-nos-imagem">
+                <img src="imagens usadas/froteglrftge.png" alt="Sobre Nós">
+            </div>
+        </section>
+        <div class="svg-onda" >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#FDAD21" fill-opacity="1" d="M0,160L48,160C96,160,192,160,288,165.3C384,171,480,181,576,202.7C672,224,768,256,864,240C960,224,1056,160,1152,133.3C1248,107,1344,117,1392,122.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+        <div class="planos-section" style="padding-top: 1px;">
+            <h2 class="servicos-titulo">CONFIRA NOSSOS PLANOS</h2>
+            <div class="plano">
+                <div class="plano-titulo">Plano Mensal</div>
+                <div class="plano-preco">Valor: R$160,00</div>
+                <div class="plano-beneficios">
+                    <i class="fa-solid fa-circle-check"></i> Direito a 5 lavagens por mês de até 5 Kg<br>
+                    <i class="fa-solid fa-circle-check"></i> Cada lavagem sai por R$32,00<br>
+                    <i class="fa-solid fa-circle-check"></i> Duração de 1 mês<br>
+                    <i class="fa-solid fa-circle-check"></i> Inclusos valor da lavagem e secagem das peças <br>
+                    <button class="plano-botão">Quero Esse</button><br>
+                    
+
+                </div>
+            </div>
+
+        
+            <div class="plano">
+                
+                <div class="plano-titulo">Plano Semestral</div>
+                <div class="plano-preco">Valor: R$1.350,00</div>
+                <div class="plano-beneficios">
+                    <i class="fa-solid fa-circle-check"></i> Direito a 5 lavagens por mês de até 15 Kg<br>
+                    <i class="fa-solid fa-circle-check"></i> Cada lavagem sai por R$45,00<br>
+                    <i class="fa-solid fa-circle-check"></i> Duração de 6 meses<br>
+                    <i class="fa-solid fa-circle-check"></i> Inclusos valor da lavagem e secagem das peças <br>
+                    <button class="plano-botão">Quero Esse</button>
+                </div>
+            </div>
+            <p style="margin-top: 30px;font-size: 20px; color: #ffffff;background-color: #0B9FB7;padding: 15px; border-radius: 10px; text-decoration: none;max-width: 500px; font-family: Montserrat; margin-left: 330px;">Gostaria de um plano personalizado?  <a href="https://w.app/kI2Vh1" style="color: #ffffff;  font-family: Montserrat Black;">Clique aqui</a></p>
+            <p style="color: rgb(255, 255, 255); padding-top: 10px;">OBS: PREÇOS SUJEITOS A ALTERAÇÃO, ENTRE EM CONTATO PARA VERIFICAR!</p>
+
+        </div>
+        <section class="sobre-nos-section" style="padding-top: 90px; ">
+            <div class="sobre-nos-imagem">
+                <img src="imagens usadas/app.png" alt="Sobre Nós" style="margin-left: 670px;">
+            </div>
+            <div class="sobre-nos-texto"  >
+                <h2 style="margin-left: -1150px;" >Baixe nosso App!</h2>
+                <p style="margin-left:-1150px;">A <b style="color: #0B9FB7;">Orla Limp</b> também possui um aplicativo presente na App Store <br> e na Google Play! Pesquisando por Orla Limp, em uma destas lojas<br> virtuais  do seu telefone, você conseguirá acessar seus pedidos, <br> seu <b style="color: #0B9FB7;">Cartão Fidelidade</b> e vários outros beneficios <br> como <b style="color: #0B9FB7;">descontos e chasback!</b></p>
+            </div>
+        </section>
+        <section class="sobre-nos-section" style="padding-top: 90px; ">
+            <div class="sobre-nos-imagem">
+                <img src="imagens usadas/HYGT.png" alt="Sobre Nós">
+            </div>
+            <div class="sobre-nos-texto"  >
+                <h2>Sobre Nós</h2>
+                <p>A <b style="color: #0B9FB7;">Orla Limp</b> nasceu com o propósito de trazer um toque jovem, e amigável para Chapecó-SC. Localizada no coração do bairro Centro, nossa lavanderia é mais do que um simples lugar para lavar suas roupas — somos seu parceiro no cuidado diário com seus tecidos. Oferecemos uma <b style="color: #0B9FB7;">variedade de serviços</b> que vão desde a lavagem e secagem até cuidados especiais com peças delicadas, sempre com um atendimento incrível que faz você se sentir em casa. Venha nos visitar e descubra como a <b style="color: #0B9FB7;">Orla Limp</b> pode deixar seu dia mais prático e suas roupas impecáveis!</p>
+            </div>
+        </section>
+        <div class="svg-onda" >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#0B9FB7" fill-opacity="1" d="M0,160L48,160C96,160,192,160,288,165.3C384,171,480,181,576,202.7C672,224,768,256,864,240C960,224,1056,160,1152,133.3C1248,107,1344,117,1392,122.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+        <section  id="contato" class="contato-section" style="padding-top: 40px;">
+            
+            <div class="contato-informacoes">
+                <h2 style="color:#ffffff;background-color: #FDAD21;border-radius: 10px; padding: 15px;text-align: center;">ENTRE EM CONTATO CONOSCO!</h2>
+                <p style="color: aliceblue;">Conecte-se com a gente através das redes sociais ou visite nossa loja física!</p>
+                <div class="social-buttons">
+                    <a href="https://instagram.com/orlalimp" target="_blank" class="social-btn instagram">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                    <a href="https://w.app/kI2Vh1" target="_blank" class="social-btn whatsapp">
+                        <i class="fab fa-whatsapp"></i> Whatsapp
+                    </a>
+                    <a href="https://facebook.com/orlalimp" target="_blank" class="social-btn facebook">
+                        <i class="fab fa-facebook"></i> Facebook
+                    </a>
+                </div>
+            </div>
+    
+            <div class="contato-mapa">
+                <!-- Google Maps Embed -->
+                <h2 style="text-align: center; color: aliceblue;">NOSSA LOCALIZAÇÃO</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3551.830979994044!2d-52.62160472523707!3d-27.098624800996106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e4b42730607c07%3A0x3d3bfe819ed2b606!2sR.%20Quintino%20Bocai%C3%BAva%2C%20303%20-%20Jardim%20It%C3%A1lia%2C%20Chapec%C3%B3%20-%20SC%2C%2089802-275!5e0!3m2!1spt-BR!2sbr!4v1729039771965!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                
+            </div>
+        </section>
+        <div id="orlando-assistant" onclick="toggleAssistant()">
+            <img src="https://i.scdn.co/image/ab67616d0000b27378aa118bf0846f51aa3aaaf0" alt="Orlando - Assistente da Orla Limp" />
+            <div id="orlando-message" class="message-box">
+                <p>Olá! Clique se precisar de ajuda.</p>
+            </div>
+        </div>
+        
+        <div id="orlando-popup" class="popup">
+            <div class="popup-content">
+                <span class="close-btn" onclick="toggleAssistant()">&times;</span>
+                <h2>Olá, eu sou o Orlando!</h2>
+                <p>Estou aqui para ajudar. Precisa de informações sobre os nossos serviços? Clique em algum dos botões abaixo!</p>
+                <button onclick="showInfo('lavagem')" style="font-family: Montserrat;">Serviço de Lavagem</button>
+                <button onclick="showInfo('planos')" style="font-family: Montserrat;">Planos e Preços</button>
+                <button onclick="showInfo('contato')" style="font-family: Montserrat;">Contato</button>
+                <div id="info-section"></div>
+            </div>
+        </div>
+
+    </main>
+    <footer> 
+        <p >&copy; 2024 Lavanderia ORLA LIMP. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

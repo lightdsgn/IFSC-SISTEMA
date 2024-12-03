@@ -1,0 +1,611 @@
+body {
+    font-family: Montserrat  ;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+}
+.header-logo{
+
+height: 20px; /* Tamanho original da imagem */
+transition: transform 0.3s ease; /* Transição suave */
+}
+.header-logo:hover {
+transform: scale(1.1); /* Aumenta a imagem em 20% ao passar o mouse */
+}
+.image-section {
+    position: relative; /* Permite o posicionamento absoluto do botão */
+    text-align: center; /* Centraliza o conteúdo, se necessário */
+}
+
+.hero-image {
+    width: 100%; /* Ajusta a imagem ao tamanho da seção */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.button {
+    
+    font-family: Degular Black;
+    padding: 15px 30px; /* Aumenta o tamanho do botão */
+    font-size: 18px; /* Aumenta o tamanho da fonte */
+    position: absolute; 
+    top: 78%; 
+    left: 11%; 
+    transform: translate(-50%, -50%); 
+    border: 2px solid #ffffff;
+    color: #ffffff; 
+    text-decoration: none; /* Remove sublinhado do link */
+    border-radius: 20px; /* Arredonda os cantos do botão */
+    transition: background-color 0.3s ease;
+    
+    
+}
+html{
+    scroll-behavior: smooth;
+  }
+.button:hover {
+    
+    background-color: #0B9FB7; /* Cor ao passar o mouse */
+    
+    
+}
+header {
+    position: fixed;
+    font-size: 20px;
+    font-family: Degular ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px;
+    background-image: linear-gradient(45deg, #FDAD21, #ff7b00);
+    background-color: #FDAD21; /* Ajuste a cor se necessário */ 
+    color: white;
+    max-height: 100px;
+    top: 0; /* Fixa no topo */
+    left: 0; /* Fixa à esquerda */
+    right: 0; /* Fixa à direita */
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+}
+
+header h1 {
+    margin: 0   ; /* Remove a margem do título */
+    flex-grow: 1;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 15;
+    display: flex;
+    margin: 0; /* Remove a margem da lista */
+}
+
+header nav ul li {
+    margin-left: 15px; /* Espaçamento entre os itens do menu */
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+}
+
+nav ul li {
+    margin-left: 15px;
+    position: relative; /* Necessário para a linha embaixo */
+    margin-left: 40px; /* Reduza o valor para diminuir o espaço entre os itens */
+    margin-right: 40px; /* Adicione se quiser um pouco de espaço à direita de cada item */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease; /* Transição suave */
+    padding: 10px; /* Para melhorar a área clicável */
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: white; /* Cor da linha */
+    width: 0; /* Começa invisível */
+    transition: width 0.3s ease; /* Transição suave */
+    position: absolute;
+    left: 50%;
+    bottom: -5px; /* Ajuste conforme necessário */
+    transform: translateX(-50%);
+}
+
+nav a:hover {
+    transform: scale(1.1); /* Aumenta o tamanho ao passar o mouse */
+    color: #FFD700; /* Cor quando passa o mouse (opcional) */
+}
+
+nav a:hover::after {
+    width: 100%; /* A linha aparece ao passar o mouse */
+}
+
+.hero {
+    text-align: center;margin: 0; /* Remove qualquer margem da seção da imagem */
+    padding: 0; /* Remove qualquer preenchimento da seção da imagem */
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+/* Seção de Serviços */
+.servicos-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Alinha os itens no centro */
+    padding: 50px;
+    background-color: #ffffff;
+}
+
+.servicos-titulo {
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    font-size: 24px; /* Tamanho da fonte */
+    color: #fafafa; /* Cor do texto */
+    background-color: #0B9FB7;
+    border-radius: 12px;
+    padding:12px;
+    width: 60%; /* Garante que o título ocupe toda a largura */
+    display: inline-block;
+}
+
+.servico-item {
+    display: flex;
+    align-items: center;
+    width: 45%; /* Ajusta a largura dos blocos */
+    margin-bottom: 20px;
+}
+.servico-icone {
+    background-image: linear-gradient(45deg, #FDAD21, #ffd000);
+    padding: 20px;
+    border-radius: 5%; /* Ícone arredondado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px; /* Tamanho do bloco do ícone */
+    height: 40px;
+    margin-right: 15px; /* Espaço entre o ícone e o texto */
+}
+
+.servico-img-icone {
+     /* Faz o ícone ocupar o bloco arredondado */
+    height: 60px;
+}
+
+.servico-texto {
+    font-size: 16px; /* Tamanho da fonte do texto */
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .servico-item {
+        width: 100%; /* Blocos ocupam toda a largura em telas pequenas */
+    }
+}
+.planos-section {
+    
+    text-align: center;
+    padding: 80px;
+    padding-bottom: 120px;
+    background-color: #FDAD21;
+}
+
+.planos-section h2 {
+    margin-bottom: 30px;
+    color: #ffffff; /* Cor do título */
+}
+
+.plano {
+    display: inline-block; /* Para que os planos fiquem lado a lado */
+    
+    width: 40%; /* Ajuste conforme necessário */
+    margin: 0 20px; /* Espaçamento entre os planos */
+    border: 2px solid #ffffff; /* Borda ao redor de cada plano */
+    border-radius: 20px; /* Arredonda os cantos */
+    padding: 20px; /* Espaço interno */
+    background-color: #ffffff; /* Fundo branco */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Transição suave */
+    
+    
+    
+}
+.plano:hover {
+    background-color: #0B9FB7; /* Cor azul ao passar o mouse */
+    transform: scale(1.05); /* Aumenta o plano ao passar o mouse */
+    color: white; /* Muda a cor do texto ao passar o mouse */
+}
+
+
+.plano-titulo {
+    
+    font-size: 20px; /* Tamanho do título do plano */
+    font-weight: bold; /* Negrito */
+    margin-bottom: 10px; /* Espaço abaixo do título */
+}
+
+.plano-preco {
+    font-family: Montserrat Black;
+    font-size: 18px; /* Tamanho do preço */
+    color: #FDAD21; /* Cor do preço */
+    margin-bottom: 15px; /* Espaço abaixo do preço */
+}
+
+.plano-beneficios {
+    text-align: left; /* Alinha os benefícios à esquerda */
+    padding-left: 20px;
+    margin-bottom: 10px;
+    
+}
+.plano-botão{
+    font-family: Montserrat ;
+    position:relative; 
+    padding: 10px 20px; /* Aumenta o tamanho do botão */
+    font-size: 18px; /* Aumenta o tamanho da fonte */
+    top: 10px;
+    left: 34%; 
+    border: 2px solid #FDAD21;
+    color: #FDAD21; 
+    background-color:#ffffff;
+    text-decoration: none;
+    border-radius: 20px; /* Arredonda os cantos do botão */
+    transition: background-color 0.3s; /* Transição suave ao passar o mouse */
+}
+.plano:hover button {
+    background-color: #FDAD21; /* Muda a cor de fundo do botão ao passar o mouse no plano */
+    color: white; /* Cor do texto do botão ao passar o mouse */
+    
+}
+.plano-botão:hover {
+    background-color: #FDAD21; /* Cor ao passar o mouse */
+    color: black;
+    box-shadow: 0 0 10px #FFC107;;
+    
+    }
+.servico-icone{
+transition: transform 0.3s ease, background-color 0.3s ease; /* Transição suave */
+}
+.servico-icone:hover {
+    
+    transform: scale(1.08); /* Aumenta o plano ao passar o mouse */
+    
+} 
+.sobre-nos-section {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 90px;
+    padding-right: 90px;
+}
+
+.sobre-nos-imagem img {
+    width: 500px; /* Tamanho quadrado */
+    height: 300px; 
+    border: 5px solid #FDAD21; /* Borda amarela */
+    border-radius: 25px; /* Cantos arredondados */
+    transition: transform 0.3s ease-in-out; /* Transição suave ao passar o mouse */
+    
+}
+
+.sobre-nos-imagem img:hover {
+    transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
+}
+
+.sobre-nos-texto {
+    max-width: 50%; /* Limita a largura do texto */
+    text-align: left;
+}
+
+.sobre-nos-texto h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.sobre-nos-texto p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+dialog {
+    font-family:   Montserrat ;
+    border: none; /* Remove borda padrão */
+    border-radius: 10px; /* Cantos arredondados */
+    padding: 20px;
+    width: 450px; /* Largura do diálogo */
+    height: 450px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra do diálogo */
+}
+
+.dialog-content {
+    font-family:   Montserrat ;
+    text-align: center; /* Centraliza o conteúdo */
+    
+}
+
+.dialog-image {
+    width: 100%; /* Imagem ocupa toda a largura */
+    border-radius: 10px; /* Cantos arredondados na imagem */
+}
+
+button#closeDialog {
+    font-family:  Montserrat;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: 2px solid #FDAD21; /* Borda amarela */
+    color: #FDAD21; /* Texto amarelo */
+    background-color: #ffffff; /* Fundo branco */
+    border-radius: 20px;
+    transition: all 0.3s ease; /* Transição suave */
+}
+button#closeDialog:hover {
+    background-color: #FDAD21; /* Fundo amarelo ao passar o mouse */
+    color: #ffffff; /* Texto branco ao passar o mouse */
+    transform: scale(1.1); /* Aumenta o botão */
+}
+
+button#closeDialog:focus {
+    outline: none; /* Remove borda de foco padrão */
+}
+
+.svg-onda {
+    
+    position: relative;
+    width: 100%;
+    height: 300px; /* Altura da onda */
+    overflow: hidden; /* Esconde partes fora da área visível */
+    margin-bottom: -5px; /* Remove qualquer margem que crie espaço indesejado */
+}
+
+.svg-onda svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.contato-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    margin: 0 auto;
+    padding: 40px ;
+    background-color: #0B9FB7;
+    
+}
+
+.contato-informacoes {
+    width: 45%;
+}
+
+.contato-informacoes h2 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.contato-informacoes p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.social-btn i {
+    margin-right: 10px;
+}
+
+/* Estilos específicos para cada rede social */
+.instagram {
+    
+    font-family: Montserrat ;
+    padding: 10px 20px; /* Aumenta o tamanho do botão */
+    font-size: 18px; /* Aumenta o tamanho da fonte */
+    border: 2px solid #ffffff;
+    color: #ffffff; 
+    background-color:#0B9FB7;
+    text-decoration: none;
+    border-radius: 20px; /* Arredonda os cantos do botão */
+    transition: background-color 0.3s; /* Transição suave ao passar o mouse */
+
+}
+
+.instagram:hover {
+    border: 2px solid #FDAD21;
+        background-color: #FDAD21; /* Cor ao passar o mouse */
+        color: rgb(255, 255, 255);
+        box-shadow: 0 0 10px #FFC107;;
+        
+        
+}
+
+.whatsapp {
+    font-family: Montserrat ;
+    padding: 10px 20px; /* Aumenta o tamanho do botão */
+    font-size: 18px; /* Aumenta o tamanho da fonte */
+    border: 2px solid #ffffff;
+    color: #ffffff; 
+    background-color:#0B9FB7;
+    text-decoration: none;
+    border-radius: 20px; /* Arredonda os cantos do botão */
+    transition: background-color 0.3s; /* Transição suave ao passar o mouse */
+}
+
+.whatsapp:hover {
+    border: 2px solid #FDAD21;
+        background-color: #FDAD21; /* Cor ao passar o mouse */
+        color: rgb(255, 255, 255);
+        box-shadow: 0 0 10px #FFC107;;
+}
+
+.facebook {
+    font-family: Montserrat ;
+    padding: 10px 20px; /* Aumenta o tamanho do botão */
+    font-size: 18px; /* Aumenta o tamanho da fonte */
+    border: 2px solid #ffffff;
+    color: #ffffff; 
+    background-color:#0B9FB7;
+    text-decoration: none;
+    border-radius: 20px; /* Arredonda os cantos do botão */
+    transition: background-color 0.3s; /* Transição suave ao passar o mouse */
+}
+
+.facebook:hover {
+    border: 2px solid #FDAD21;
+        background-color: #FDAD21; /* Cor ao passar o mouse */
+        color: rgb(255, 255, 255);
+        box-shadow: 0 0 10px #FFC107;;
+}
+
+.contato-mapa {
+    width: 45%;
+    height: 450px;
+    border: 5px solid #FDAD21;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.contato-mapa:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-image: linear-gradient(45deg, #FDAD21, #ff7b00);
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+#orlando-assistant {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+
+}
+
+#orlando-assistant img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.message-box {
+    position: absolute;
+    right: 80px;
+    bottom: 20px;
+    background-color: #0B9FB7;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    white-space: nowrap; /* Força o texto a ficar em uma linha */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.message-box::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent #0B9FB7;
+    transform: translateY(-50%);
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.popup-content h2 {
+    color: #0B9FB7;
+}
+
+.popup-content button {
+    background-color: #FDAD21;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.popup-content button:hover {
+    background-color: #ffbb42;
+}
+
+#info-section {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
